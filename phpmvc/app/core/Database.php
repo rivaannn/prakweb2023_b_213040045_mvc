@@ -82,4 +82,10 @@ class Database
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+    public function rowCount()
+    {
+        // untuk menghitung baris yang ada di tabel
+        return $this->stmt->rowCount();
+    }
 }
